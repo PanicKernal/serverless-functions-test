@@ -1,0 +1,198 @@
+C:\Users\Family\Documents\Projects\Tutorials\Serverless Functions 1>ntl login
+Logging into your Netlify account...
+Opening https://app.netlify.com/authorize?response_type=ticket&ticket=48d950957b615dfcf76d4dd0b70cba40
+
+You are now logged into your Netlify account!
+
+Run netlify status for account details
+
+To see all available commands run: netlify help
+
+
+C:\Users\Family\Documents\Projects\Tutorials\Serverless Functions 1>ntl status
+──────────────────────┐
+ Current Netlify User │
+──────────────────────┘
+Name:  Vlad
+Email: vlad4422@yahoo.com
+Teams:
+  Vlad's team: Collaborator
+ »   Warning: Did you run `netlify link` yet?
+ »   Error: You don't appear to be in a folder that is linked to a site
+
+C:\Users\Family\Documents\Projects\Tutorials\Serverless Functions 1>ntl init
+
+Adding local .netlify folder to .gitignore file...
+? What would you like to do? +  Create & configure a new site
+? Team: Vlad's team
+Choose a unique site name (e.g. netlify-thinks-vlad-is-great-a2601.netlify.app) or leave it blank for a random name. You can update the site name later.
+? Site name (optional): serverless-site
+ »   Warning: serverless-site.netlify.app already exists. Please try a different slug.
+Choose a unique site name (e.g. the-awesome-vlad-site-a2000.netlify.app) or leave it blank for a random name. You can update the site name later.
+? Site name (optional): serverless-test
+ »   Warning: serverless-test.netlify.app already exists. Please try a different slug.
+Choose a unique site name (e.g. netlify-thinks-vlad-is-great-88a10.netlify.app) or leave it blank for a random name. You can update the site name later.
+? Site name (optional): serverless-vlad
+
+Site Created
+
+Admin URL: https://app.netlify.com/sites/serverless-vlad
+URL:       https://serverless-vlad.netlify.app
+Site ID:   ca1345f6-c2e5-480b-96ca-ec1ad9d9a712
+
+? Netlify CLI needs access to your GitHub account to configure Webhooks and Deploy Keys. What would you like to do? Authorize with a GitHub personal access token
+? Your GitHub personal access token: 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
+? Your build command (hugo build/yarn run build/etc): # no build command
+? Directory to deploy (blank for current dir): netlify/functions
+? Netlify functions folder: (netlify/functions)
+C:\Users\Family\Documents\Projects\Tutorials\Serverless Functions 1>ntl
+
+⬥ Netlify CLI
+Read the docs: https://www.netlify.com/docs/cli
+Support and bugs: https://github.com/netlify/cli/issues
+
+VERSION
+  netlify-cli/8.6.15 win32-x64 node-v16.13.1
+
+USAGE
+  $ netlify [COMMAND]
+
+COMMANDS
+  $ addons       (Beta) Manage Netlify Add-ons
+  $ api          Run any Netlify API method
+  $ build        (Beta) Build on your local machine
+  $ completion   (Beta) Generate shell completion script
+  $ deploy       Create a new deploy from the contents of a folder
+  $ dev          Local dev server
+  $ env          (Beta) Control environment variables for the current site
+  $ functions    Manage netlify functions
+  $ init         Configure continuous deployment for a new or existing site. To create a new
+                 site without continuous deployment, use `netlify sites:create`
+  $ link         Link a local repo or project folder to an existing site on Netlify
+  $ lm           Handle Netlify Large Media operations
+  $ login        Login to your Netlify account
+  $ open         Open settings for the site linked to the current folder
+  $ sites        Handle various site operations
+  $ status       Print status information
+  $ switch       Switch your active Netlify account
+  $ unlink       Unlink a local folder from a Netlify site
+  $ watch        Watch for site deploy to finish
+
+
+C:\Users\Family\Documents\Projects\Tutorials\Serverless Functions 1>ntl sites
+Handle various site operations
+
+USAGE
+  $ netlify sites [options]
+
+OPTIONS
+  -h, --help                                display help for command
+  --debug                                   Print debugging information
+  --httpProxy [address]                     Proxy server address to route requests through.
+  --httpProxyCertificateFilename [file]     Certificate file to use when connecting using a proxy server
+
+DESCRIPTION
+  The sites command will help you manage all your sites
+
+EXAMPLES
+  $ netlify sites:create --name my-new-site
+  $ netlify sites:list
+
+COMMANDS
+  $ sites:create                            Create an empty site (advanced)
+  $ sites:list                              List all sites you have access to
+  $ sites:delete                            Delete a site
+
+
+C:\Users\Family\Documents\Projects\Tutorials\Serverless Functions 1>ntl sites:list
+√ Loading your sites
+
+────────────────────────────┐
+ Current Netlify Sites    │
+────────────────────────────┘
+
+Count: 2
+
+serverless-vlad - ca1345f6-c2e5-480b-96ca-ec1ad9d9a712
+  url:  https://serverless-vlad.netlify.app
+  account: Vlad's team
+─────────────────────────────────────────────────
+graceslavicchurch - 34bed131-3adc-45d6-8592-a0d64d92d971
+  url:  https://graceslavicchurch.netlify.app
+  repo: https://bitbucket.org/kernalpanic/main-1.0
+  account: Vlad's team
+─────────────────────────────────────────────────
+
+C:\Users\Family\Documents\Projects\Tutorials\Serverless Functions 1>cd..
+
+C:\Users\Family\Documents\Projects\Tutorials>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 4288-ECC4
+
+ Directory of C:\Users\Family\Documents\Projects\Tutorials
+
+01/08/2022  08:52 PM    <DIR>          .
+01/08/2022  08:52 PM    <DIR>          ..
+01/08/2022  08:35 PM    <DIR>          Serverless Functions 1
+01/08/2022  08:54 PM    <DIR>          Serverless Functions Test
+               0 File(s)              0 bytes
+               4 Dir(s)  83,366,883,328 bytes free
+
+C:\Users\Family\Documents\Projects\Tutorials>cd "Serverless Functions Test"
+
+C:\Users\Family\Documents\Projects\Tutorials\Serverless Functions Test>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 4288-ECC4
+
+ Directory of C:\Users\Family\Documents\Projects\Tutorials\Serverless Functions Test
+
+01/08/2022  08:54 PM    <DIR>          .
+01/08/2022  08:54 PM    <DIR>          ..
+01/08/2022  08:54 PM                11 .gitignore
+01/08/2022  08:54 PM    <DIR>          public
+01/08/2022  08:54 PM             4,432 README.md
+               2 File(s)          4,443 bytes
+               3 Dir(s)  83,366,883,328 bytes free
+
+C:\Users\Family\Documents\Projects\Tutorials\Serverless Functions Test>ntl init
+
+Adding local .netlify folder to .gitignore file...
+? What would you like to do? ⇄  Connect this directory to an existing Netlify site
+
+netlify link will connect this folder to a site on Netlify
+
+? How do you want to link this folder to a site? Choose from a list of your recently updated sites
+Fetching recently updated sites...
+
+? Which site do you want to link? serverless-vlad
+
+Directory Linked
+
+Admin url: https://app.netlify.com/sites/serverless-vlad
+Site url:  https://serverless-vlad.netlify.app
+
+Site id saved to C:\Users\Family\Documents\Projects\Tutorials\Serverless Functions Test\.netlify\state.json
+
+You can now run other `netlify` cli commands in this directory
+
+? Netlify CLI needs access to your GitHub account to configure Webhooks and Deploy Keys. What would you like to do? Authorize with a GitHub personal
+access token
+? Your GitHub personal access token: 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
+? Your build command (hugo build/yarn run build/etc): # no build command
+? Directory to deploy (blank for current dir): public
+? Netlify functions folder: netlify/functions
+? No netlify.toml detected. Would you like to create one with these build settings? Yes
+Adding deploy key to repository...
+Deploy key added!
+
+Creating Netlify GitHub Notification Hooks...
+Netlify Notification Hooks configured!
+
+Success! Netlify CI/CD Configured!
+
+This site is now configured to automatically deploy from github branches & pull requests
+
+Next steps:
+
+  git push       Push to your git repository to trigger new site builds
+  netlify open   Open the Netlify admin URL of your site
